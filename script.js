@@ -1,23 +1,7 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".primary-nav");
-const dialog = document.querySelector(".project-dialog");
-const projects = {
-  fieldnotes: {
-    title: "Fieldnotes",
-    description: "A travel journal concept for people who would rather take the long way. Editorial typography and quiet photography make room for the details of a place.",
-    tags: ["Identity", "Art direction", "Web design"]
-  },
-  "common-ground": {
-    title: "Common Ground",
-    description: "A considered storefront concept for useful objects made to last. The interface keeps the product story clear and the shopping experience calm.",
-    tags: ["E-commerce", "Interface", "Responsive"]
-  },
-  "soft-forms": {
-    title: "Soft Forms",
-    description: "A bright visual identity concept for a small creative studio, pairing simple shapes with a flexible digital presence.",
-    tags: ["Identity", "Art direction", "Typography"]
-  }
-};
+const contactForm = document.querySelector("#contact-form");
+const formNote = document.querySelector("#form-note");
 
 menuToggle.addEventListener("click", () => {
   const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
@@ -48,23 +32,11 @@ document.querySelectorAll(".filter-button").forEach((button) => {
   });
 });
 
-document.querySelectorAll(".project-open").forEach((button) => {
-  button.addEventListener("click", () => {
-    const project = projects[button.dataset.project];
-    dialog.querySelector("#dialog-title").textContent = project.title;
-    dialog.querySelector(".dialog-description").textContent = project.description;
-    dialog.querySelector(".dialog-tags").replaceChildren(...project.tags.map((tag) => {
-      const element = document.createElement("span");
-      element.textContent = tag;
-      return element;
-    }));
-    dialog.showModal();
-    document.body.classList.add("dialog-open");
-  });
-});
-
-dialog.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
-dialog.addEventListener("close", () => document.body.classList.remove("dialog-open"));
-dialog.addEventListener("click", (event) => {
-  if (event.target === dialog) dialog.close();
+contactForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(contactForm);
+  const subject = encodeURIComponent(`Portfolio inquiry from ${formData.get("name")}`);
+  const body = encodeURIComponent(`Name: ${formData.get("name")}\nEmail: ${formData.get("email")}\n\n${formData.get("message")}`);
+  formNote.textContent = "Opening your email app with your message...";
+  window.location.href = `mailto:${contactForm.dataset.recipient}?subject=${subject}&body=${body}`;
 });

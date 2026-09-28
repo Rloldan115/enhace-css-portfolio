@@ -1,19 +1,20 @@
-# Portfolio starter
+# Alex Styles Portfolio
 
-A responsive, static portfolio starter built with HTML, CSS, and vanilla JavaScript. Open `index.html` directly or serve this folder locally. The page is ready to publish from a repository root with GitHub Pages.
+A responsive portfolio for Alex Styles, built with HTML, CSS, and vanilla JavaScript. Open `index.html` directly or serve this folder locally. The page is published from the repository root with GitHub Pages.
 
 ## Before publishing
 
-- Replace the concept projects and descriptions with your own work.
-- Update the contact link from `hello@example.com` to your email.
-- Review all copy, image choices, and project details for accuracy.
+- Replace the concept projects, images, and descriptions with accurate case studies.
+- Update `hello@example.com` in `index.html` to the contact email that should receive inquiries.
+- The contact form opens the visitor's email app; a server-backed form requires a separate form service or backend.
+- Adjust the palette in `styles.css` to Alex's preferred brand colors if needed.
 
 ## How Copilot assisted
 
-- **Foundation:** Copilot created the semantic HTML structure and the initial portfolio sections.
-- **CSS enhancement:** Copilot established the type, color, spacing, image treatments, and project layouts.
-- **Responsive design:** Copilot added tablet and mobile breakpoints, a compact navigation menu, and reduced-motion support.
-- **Interaction and accessibility:** Copilot implemented project filters, project-detail dialogs, hover and focus states, keyboard-friendly controls, and accessible labels.
-- **Visual polish:** Copilot refined the editorial layout with a distinct type pairing, restrained color accents, art-directed imagery, and subtle motion.
+- **Foundation:** Copilot created semantic HTML for About, Portfolio, and Contact.
+- **CSS enhancement:** Copilot established typography, a cohesive palette, responsive grids, and organized component styles.
+- **Advanced CSS:** Copilot added hover transitions and a staggered fade-in for project thumbnails.
+- **Optimization:** Copilot removed obsolete dialog styling and scripts when project links were changed to case-study anchors.
+- **Accessibility:** Copilot added labeled form controls, required-field validation, keyboard focus styles, and reduced-motion support.
 
-This summary describes the assistance provided while creating this starter. Replace any concept content before presenting it as your own work.
+The portfolio projects and contact address are examples; verify and replace them before submitting or sharing the site.
