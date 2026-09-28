@@ -14,7 +14,8 @@ A responsive portfolio for Josha Styles, built with HTML, CSS, and vanilla JavaS
 - **Foundation:** Copilot created semantic HTML for About, Portfolio, and Contact.
 - **CSS enhancement:** Copilot established typography, a cohesive palette, responsive grids, and organized component styles.
 - **Advanced CSS:** Copilot added hover transitions and a staggered fade-in for project thumbnails.
-- **Optimization:** Copilot removed obsolete dialog styling and scripts when project links were changed to case-study anchors.
+- **Responsive optimization:** Copilot tuned the mobile, tablet, and desktop layouts and checked them at representative viewport widths.
+- **UI/UX:** Copilot added project-detail dialogs, navigation tooltips, and polished hover and focus feedback.
 - **Accessibility:** Copilot added labeled form controls, required-field validation, keyboard focus styles, and reduced-motion support.
 
 The portfolio projects and contact address are examples; verify and replace them before submitting or sharing the site.

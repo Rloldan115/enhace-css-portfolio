@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=activity-2">
+  <link rel="stylesheet" href="styles.css?v=activity-3">
   <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
-  <script src="script.js?v=dedb65f" defer></script>
+  <script src="script.js?v=activity-3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -22,9 +22,9 @@
       <span></span><span></span>
     </button>
     <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+      <a href="#work" data-tooltip="Browse selected projects">Work</a>
+      <a href="#about" data-tooltip="Meet Josha">About</a>
+      <a class="nav-contact" href="#contact" data-tooltip="Start a conversation">Let's talk <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
@@ -63,7 +63,7 @@
 
       <div class="project-grid">
         <article class="project-card project-card-wide" data-category="identity digital">
-          <a class="project-link" href="#fieldnotes" aria-label="Read the Fieldnotes case study">
+          <a class="project-link" href="#fieldnotes" data-project="fieldnotes" aria-haspopup="dialog" aria-label="View Fieldnotes project details">
             <span class="project-image image-fieldnotes">
               <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1500&q=85" alt="Mountain lake and cabin beneath a clear sky" loading="lazy">
               <span class="image-label">FIELDNOTES / 001</span>
@@ -74,7 +74,7 @@
         </article>
 
         <article class="project-card" data-category="digital">
-          <a class="project-link" href="#common-ground" aria-label="Read the Common Ground case study">
+          <a class="project-link" href="#common-ground" data-project="common-ground" aria-haspopup="dialog" aria-label="View Common Ground project details">
             <span class="project-image image-common">
               <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85" alt="Carefully arranged objects in a warm, minimal home" loading="lazy">
               <span class="image-label">COMMON GROUND / 002</span>
@@ -85,7 +85,7 @@
         </article>
 
         <article class="project-card" data-category="identity">
-          <a class="project-link" href="#soft-forms" aria-label="Read the Soft Forms case study">
+          <a class="project-link" href="#soft-forms" data-project="soft-forms" aria-haspopup="dialog" aria-label="View Soft Forms project details">
             <span class="project-image image-soft">
               <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1200&q=85" alt="Colorful abstract architectural detail against a blue sky" loading="lazy">
               <span class="image-label">SOFT FORMS / 003</span>
@@ -143,6 +143,14 @@
     <p>Josha Styles · Portfolio 2026</p>
     <a class="back-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
   </footer>
+
+  <dialog class="project-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <button class="dialog-close" type="button" aria-label="Close project details" title="Close project details">×</button>
+    <p class="eyebrow dialog-kicker"></p>
+    <h2 id="dialog-title"></h2>
+    <p class="dialog-description" id="dialog-description"></p>
+    <a class="dialog-back-link" href="#work">Back to selected work <span aria-hidden="true">↗</span></a>
+  </dialog>
 
 </body>
 </html>

@@ -2,6 +2,11 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".primary-nav");
 const contactForm = document.querySelector("#contact-form");
 const formNote = document.querySelector("#form-note");
+const projectDialog = document.querySelector(".project-dialog");
+const dialogTitle = document.querySelector("#dialog-title");
+const dialogKicker = document.querySelector(".dialog-kicker");
+const dialogDescription = document.querySelector("#dialog-description");
+let lastProjectTrigger;
 
 menuToggle.addEventListener("click", () => {
   const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
@@ -32,6 +37,40 @@ document.querySelectorAll(".filter-button").forEach((button) => {
   });
 });
 
+document.querySelectorAll(".project-link[data-project]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const detail = document.getElementById(link.dataset.project);
+    if (!detail || typeof projectDialog.showModal !== "function") return;
+
+    event.preventDefault();
+    lastProjectTrigger = link;
+    dialogKicker.textContent = detail.querySelector(".eyebrow").textContent;
+    dialogTitle.textContent = detail.querySelector("h3").textContent;
+    dialogDescription.textContent = detail.querySelector(":scope > div > p").textContent;
+    projectDialog.showModal();
+  });
+});
+
+projectDialog.querySelector(".dialog-close").addEventListener("click", () => projectDialog.close());
+projectDialog.addEventListener("cancel", (event) => {
+  event.preventDefault();
+  projectDialog.close();
+});
+projectDialog.addEventListener("click", (event) => {
+  if (event.target === projectDialog) projectDialog.close();
+});
+projectDialog.addEventListener("close", () => {
+  lastProjectTrigger?.focus();
+  lastProjectTrigger = null;
+});
+projectDialog.querySelector(".dialog-back-link").addEventListener("click", () => projectDialog.close());
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && projectDialog.open) {
+    event.preventDefault();
+    projectDialog.close();
+  }
+});
+
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(contactForm);
@@ -40,3 +79,5 @@ contactForm.addEventListener("submit", (event) => {
   formNote.textContent = "Opening your email app with your message...";
   window.location.href = `mailto:${contactForm.dataset.recipient}?subject=${subject}&body=${body}`;
 });
+
+document.documentElement.classList.add("js-enabled");
