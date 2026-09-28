@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A creative developer's portfolio of thoughtful digital experiences and interface concepts.">
+  <meta name="theme-color" content="#f4f2ed">
+  <title>Selected work | Creative developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Portfolio home">folio<span>.</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">
+      <span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero page-wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> Independent creative developer</p>
+        <h1 id="hero-title">Good ideas<br>deserve <em>good</em><br>interfaces<span class="period">.</span></h1>
+        <div class="hero-bottom">
+          <p class="hero-intro">I bring thoughtful design and front-end craft together to make the web feel a little more human.</p>
+          <a class="circle-link" href="#work" aria-label="Explore selected work"><span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="A sunlit architectural study with a red sculptural form">
+        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1400&q=85" alt="Sculptural modern architecture in warm sunlight">
+        <div class="art-stamp"><span>Ideas in<br>good shape</span><span aria-hidden="true">✳</span></div>
+        <p class="image-note">Design-led development <span>01 / 03</span></p>
+      </div>
+      <div class="hero-index" aria-hidden="true"><span>PORTFOLIO / 2026</span><span>SCROLL TO EXPLORE</span></div>
+    </section>
+
+    <section class="work-section page-wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A few things I've been shaping</p>
+          <h2 id="work-title">Selected <em>work</em></h2>
+        </div>
+        <p class="section-aside">Independent concepts<br>made with curiosity.</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter projects">
+        <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All work <span>03</span></button>
+        <button class="filter-button" type="button" data-filter="identity" aria-pressed="false">Identity</button>
+        <button class="filter-button" type="button" data-filter="digital" aria-pressed="false">Digital</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card project-card-wide" data-category="identity digital">
+          <button class="project-open" type="button" data-project="fieldnotes" aria-label="View Fieldnotes concept project">
+            <span class="project-image image-fieldnotes">
+              <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1500&q=85" alt="Mountain lake and cabin beneath a clear sky" loading="lazy">
+              <span class="image-label">FIELDNOTES / 001</span>
+              <span class="image-arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="project-meta"><span><span class="project-title">Fieldnotes</span><span class="project-kind">A slower kind of travel journal</span></span><span class="project-type">Identity · Digital</span></span>
+          </button>
+        </article>
+
+        <article class="project-card" data-category="digital">
+          <button class="project-open" type="button" data-project="common-ground" aria-label="View Common Ground concept project">
+            <span class="project-image image-common">
+              <img src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85" alt="Carefully arranged objects in a warm, minimal home" loading="lazy">
+              <span class="image-label">COMMON GROUND / 002</span>
+              <span class="image-arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="project-meta"><span><span class="project-title">Common Ground</span><span class="project-kind">A considered home goods shop</span></span><span class="project-type">Digital</span></span>
+          </button>
+        </article>
+
+        <article class="project-card" data-category="identity">
+          <button class="project-open" type="button" data-project="soft-forms" aria-label="View Soft Forms concept project">
+            <span class="project-image image-soft">
+              <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1200&q=85" alt="Colorful abstract architectural detail against a blue sky" loading="lazy">
+              <span class="image-label">SOFT FORMS / 003</span>
+              <span class="image-arrow" aria-hidden="true">↗</span>
+            </span>
+            <span class="project-meta"><span><span class="project-title">Soft Forms</span><span class="project-kind">A playful studio identity</span></span><span class="project-type">Identity</span></span>
+          </button>
+        </article>
+      </div>
+      <p class="concept-note">These are concept studies. Replace them with your own work before publishing.</p>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="about-inner page-wrap">
+        <div class="about-label"><p class="eyebrow">A little about me</p><span class="about-mark" aria-hidden="true">✳</span></div>
+        <div class="about-copy">
+          <h2 id="about-title">I like the details that make a digital experience <em>feel</em> considered.</h2>
+          <p>From a clear first impression to the small interaction that makes someone smile, I care about how things work and how they make people feel.</p>
+          <div class="skill-list" aria-label="Areas of interest"><span>Creative development</span><span>Interface design</span><span>Visual storytelling</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section page-wrap" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Have a good one in mind?</p>
+      <div class="contact-row">
+        <h2 id="contact-title">Let's make<br><em>something</em> matter.</h2>
+        <div class="contact-actions">
+          <a class="contact-link" href="mailto:hello@example.com" data-tooltip="Replace with your email address">Say hello <span aria-hidden="true">↗</span></a>
+          <p>Have a project, a question,<br>or a very good book recommendation?</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer page-wrap">
+    <a class="wordmark" href="#top" aria-label="Back to top">folio<span>.</span></a>
+    <p>Made with care, and a little help from Copilot.</p>
+    <a class="back-top" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+
+  <dialog class="project-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close project details" title="Close">×</button>
+    <p class="eyebrow" id="dialog-kicker">Concept project</p>
+    <h2 id="dialog-title">Project title</h2>
+    <p class="dialog-description"></p>
+    <div class="dialog-tags"></div>
+    <p class="dialog-note">A concept study created as a portfolio starter. Replace this with your project story.</p>
+  </dialog>
+</body>
+</html>
