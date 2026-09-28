@@ -1,13 +1,13 @@
-# Alex Styles Portfolio
+# Josha Styles Portfolio
 
-A responsive portfolio for Alex Styles, built with HTML, CSS, and vanilla JavaScript. Open `index.html` directly or serve this folder locally. The page is published from the repository root with GitHub Pages.
+A responsive portfolio for Josha Styles, built with HTML, CSS, and vanilla JavaScript. Open `index.html` directly or serve this folder locally. The page is published from the repository root with GitHub Pages.
 
 ## Before publishing
 
 - Replace the concept projects, images, and descriptions with accurate case studies.
 - Update `hello@example.com` in `index.html` to the contact email that should receive inquiries.
 - The contact form opens the visitor's email app; a server-backed form requires a separate form service or backend.
-- Adjust the palette in `styles.css` to Alex's preferred brand colors if needed.
+- Adjust the palette in `styles.css` to Josha's preferred brand colors if needed.
 
 ## How Copilot assisted
 
